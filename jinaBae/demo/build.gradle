@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.3'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Framework에서 제공하는 JPA라이브러리
+    // 이 라이브러리를 사용하기 위해 위와 같이 implementation 를 작성해저 구성해야 함
+    //                                   -> 라이브러리 사용할 떄, 컴파일 시에도 라이브러리를 사용해서 다른 코드가 참조할 수 있게 만들어줌
+    // java Compiler가 java code 뿐만 아니라 implementation 사항들을 함께 읽어서 bytecode로 구성한다.
+    // 'implementation' 키워드를 붙여서 JVM이 JPA 라이브러리와 함께 동작할 수 있도록 만들어졌다고 볼 수 있다.
+    //  bytecode <---- java compiler가 만들어 놓는 파일, 내부적으로 작업
+    //  JVM <-----bytecode를 실제로 읽을 수 있는 시스템 내부의 요소
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
