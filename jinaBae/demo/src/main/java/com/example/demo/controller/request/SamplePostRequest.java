@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SamplePostRequest {
+    Long samplePostId;
     String title;
     String content;
     String writer;
