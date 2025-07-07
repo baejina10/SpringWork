@@ -1,6 +1,6 @@
-package com.example.demo.example.controller.request;
+package com.example.demo.study.controller.request;
 
-import com.example.demo.example.entity.Post;
+import com.example.demo.study.entity.Post;
 import lombok.*;
 
 @ToString

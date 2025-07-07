@@ -1,4 +1,4 @@
-package com.example.demo.example.controller.request;
+package com.example.demo.study.controller.request;
 
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
@@ -9,6 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class FindPostRequest {
-    Long postId;
+public class FindAccountRequest {
+    Long accountId;
 }

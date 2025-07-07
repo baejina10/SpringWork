@@ -1,8 +1,8 @@
-package com.example.demo.example.controller;
+package com.example.demo.study.controller;
 
-import com.example.demo.example.controller.request.SamplePostRequest;
-import com.example.demo.example.entity.SamplePost;
-import com.example.demo.example.repository.SamplePostRepository;
+import com.example.demo.study.controller.request.SamplePostRequest;
+import com.example.demo.study.entity.SamplePost;
+import com.example.demo.study.repository.SamplePostRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

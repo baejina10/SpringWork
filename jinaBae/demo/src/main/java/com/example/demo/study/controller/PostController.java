@@ -1,12 +1,14 @@
-package com.example.demo.example.controller;
+package com.example.demo.study.controller;
 
-import com.example.demo.example.controller.request.FindPostRequest;
-import com.example.demo.example.controller.request.PostRequest;
-import com.example.demo.example.controller.request.UpdatePostRequest;
-import com.example.demo.example.entity.Post;
-import com.example.demo.example.repository.PostRepository;
+import com.example.demo.study.controller.request.FindPostRequest;
+import com.example.demo.study.controller.request.PostRequest;
+import com.example.demo.study.controller.request.UpdatePostRequest;
+import com.example.demo.study.entity.Post;
+import com.example.demo.study.repository.PostRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.hateoas.EntityModel;
+//import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -190,4 +192,27 @@ public class PostController {
 
         return postRepository.save(foundPost);
     }
+
+//    @GetMapping("/post/{id}")
+//    public EntityModel<Post> getPost(@PathVariable Long id){
+//        // findById(id)로 실제 id에 해당하는 Post Entity를 찾아옵니다.
+//        // 찾아왔더니 없다면 ? (orElseThrow())
+//        // 'post 못찾았다' <- new IllegalArgumentException()
+//        // Illegal은 legal의 반댓말이며 숫자 11로 표현하면 안됩니다.
+//        Post post = postRepository.findById(id)
+//                .orElseThrow(()-> new IllegalArgumentException("Post not found"));
+//
+//        // EntityModel 은 Spring HATEOAS에서 제동하는 클래스입니다.
+//        // 실제 데이터와 링크 정보를 출력해줍니다.
+//        // 결론적으로 Post 객체를 리턴하면서 실제 자신의 링크 주소를 함께 리턴합니다.
+//        return EntityModel.of(
+//                post,
+//                // WebMvcLinkBuilder.linkTo()의 경우 링크 생성을 지원합니다.
+//                WebMvcLinkBuilder.linkTo(
+//                        // 이것은 실제 메서드 실행이 아니라 이 메서드 동작 경로는 이러이러하다.
+//                        WebMvcLinkBuilder.methodOn(PostController.class).getPost(id)
+//                ).withSelfRel()
+//                // withSelfRel() 이라는 것을 통해서 API 명세를 전달합니다.
+//        );
+//    }
 }

@@ -1,4 +1,4 @@
-package com.example.demo.example.controller.request;
+package com.example.demo.study.controller.request;
 
 import lombok.*;
 
@@ -7,8 +7,8 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateBoardRequest {
-    Long boardId;
+public class UpdatePostRequest {
+    Long postId;
     String title;
     String content;
 }
