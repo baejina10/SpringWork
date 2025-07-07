@@ -1,4 +1,4 @@
-package com.example.demo.controller.request;
+package com.example.demo.example.controller.request;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

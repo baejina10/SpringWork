@@ -1,10 +1,10 @@
-package com.example.demo.controller;
+package com.example.demo.example.controller;
 
-import com.example.demo.controller.request.BoardRequest;
-import com.example.demo.controller.request.FindBoardRequest;
-import com.example.demo.controller.request.UpdateBoardRequest;
-import com.example.demo.entity.Board;
-import com.example.demo.repository.BoardRepository;
+import com.example.demo.example.controller.request.BoardRequest;
+import com.example.demo.example.controller.request.FindBoardRequest;
+import com.example.demo.example.controller.request.UpdateBoardRequest;
+import com.example.demo.example.entity.Board;
+import com.example.demo.example.repository.BoardRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

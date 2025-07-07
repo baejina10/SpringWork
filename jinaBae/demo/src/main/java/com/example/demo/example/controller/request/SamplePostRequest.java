@@ -1,6 +1,6 @@
-package com.example.demo.controller.request;
+package com.example.demo.example.controller.request;
 
-import com.example.demo.entity.SamplePost;
+import com.example.demo.example.entity.SamplePost;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 

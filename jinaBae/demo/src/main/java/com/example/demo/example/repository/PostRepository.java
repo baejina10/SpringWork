@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.example.demo.example.repository;
 
-import com.example.demo.entity.Post;
+import com.example.demo.example.entity.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 //JPA를 사용해서 DB를 자동화 하는 이유

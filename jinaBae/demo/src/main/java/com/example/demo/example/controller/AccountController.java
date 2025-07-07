@@ -1,9 +1,9 @@
-package com.example.demo.controller;
+package com.example.demo.example.controller;
 
-import com.example.demo.controller.request.AccountRequest;
-import com.example.demo.controller.request.FindAccountRequest;
-import com.example.demo.entity.Account;
-import com.example.demo.repository.AccountRepository;
+import com.example.demo.example.controller.request.AccountRequest;
+import com.example.demo.example.controller.request.FindAccountRequest;
+import com.example.demo.example.entity.Account;
+import com.example.demo.example.repository.AccountRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

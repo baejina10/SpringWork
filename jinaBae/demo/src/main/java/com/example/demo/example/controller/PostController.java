@@ -1,10 +1,10 @@
-package com.example.demo.controller;
+package com.example.demo.example.controller;
 
-import com.example.demo.controller.request.FindPostRequest;
-import com.example.demo.controller.request.PostRequest;
-import com.example.demo.controller.request.UpdatePostRequest;
-import com.example.demo.entity.Post;
-import com.example.demo.repository.PostRepository;
+import com.example.demo.example.controller.request.FindPostRequest;
+import com.example.demo.example.controller.request.PostRequest;
+import com.example.demo.example.controller.request.UpdatePostRequest;
+import com.example.demo.example.entity.Post;
+import com.example.demo.example.repository.PostRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
